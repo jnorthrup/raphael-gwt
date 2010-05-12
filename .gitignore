@@ -1,0 +1,6 @@
+raphael-gwt.jar
+war/WEB-INF/classes
+war/WEB-INF/lib
+.classpath
+.settings
+.project
