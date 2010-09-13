@@ -61,15 +61,16 @@ public class Raphael extends Widget
         return jso.attr(attr, null);
     }
 
-    public Raphael attr(Param name, String value) {
+    public <T extends Raphael>T attr(Param name, String value) {
         String attr = Params.makeParam(name);
         jso.attr(attr, value);
-        return this;
+        return (T) this;
     }
 
-    public Raphael attr(Param name, double value) {
-        attr(name, Double.toString(value));
-        return this;
+    public <T extends Raphael>T attr(Param name, double value) {
+          String attr = Params.makeParam(name);
+        jso.attr(attr, value);
+        return (T) this;
     }
 
 

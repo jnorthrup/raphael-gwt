@@ -23,8 +23,12 @@ public class RaphaelJSO extends JavaScriptObject {
     protected RaphaelJSO() {
     }
 
-    public final native String attr(String name, String value) /*-{
-		return this.attr(name, value).toString();
+    public final native <T> T attr(String name, String value) /*-{
+		return this.attr(name, value) ;
+	}-*/;
+
+    public final native <T> T attr(String name, double value) /*-{
+		return this.attr(name, value) ;
 	}-*/;
 
     public final native Element node() /*-{
